@@ -85,7 +85,6 @@ class ArithmeticStringParser:
         pass
 
     def parse(self, input_value: str) -> Op:
-        print(f'Parsing: {input_value}')
         reader = StringCharTokenizer(input_value)
         return self.__parse_expression(reader, 0)
 
@@ -113,9 +112,9 @@ class ArithmeticStringParser:
 
     def __parse_factor(self, reader: StringCharTokenizer) -> Op:
         if reader.peek() == "(":
-            reader.read()  # Consume '('
+            reader.read()
             expression = self.__parse_expression(reader, 0)
-            reader.read()  # Consume ')'
+            reader.read() 
             return expression
         else:
             num = self.__parse_number(reader)
@@ -150,8 +149,8 @@ class Calculator:
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
-@app.route(route="http_trigger")
-def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
+@app.route(route="calc")
+def calc(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     calculation = req.params.get('calculation')
