@@ -145,6 +145,7 @@ class Calculator:
     def eval(self, input_value: str) -> float:
         expression = ArithmeticStringParser().parse(input_value)
         print(f'Parsed expression: {expression}')
+        logging.info(f'Parsed expression: {expression}')
         return expression.eval()
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
@@ -167,6 +168,7 @@ def calc(req: func.HttpRequest) -> func.HttpResponse:
             calculator = Calculator()
             result = calculator.eval(calculation)
             print("Result: " + str(result))
+            logging.info("Result: " + str(result))
             return func.HttpResponse(f"Hello, evaluating: {calculation} = " + str(result))
         except Exception as e:
             return func.HttpResponse(
@@ -184,11 +186,16 @@ if __name__ == '__main__':
     calculator = Calculator()
     result = calculator.eval("58+2*3")
     print("Result: " + str(result))
+    logging.info("Result: " + str(result))
     result = calculator.eval("(58+2)*3")
     print("Result: " + str(result))
+    logging.info("Result: " + str(result))
     result = calculator.eval("58+(2*3)")
     print("Result: " + str(result))
+    logging.info("Result: " + str(result))
     result = calculator.eval("(58+2)*(3-1)")
     print("Result: " + str(result))
+    logging.info("Result: " + str(result))
     result = calculator.eval("(58.5+2.2)*(3.8-1)")
     print("Result: " + str(result))
+    logging.info("Result: " + str(result))
