@@ -41,4 +41,10 @@ or via Curl & POST:
     curl -X POST -H "Content-Type: application/json" -d '{"calculation":"(58.5+2.2)*(3.8-1)"}' https://azure-calculator.azurewebsites.net/api/calc; echo
 ```
 
-There are bugs in the calculation, but it's just a demo, so...
+Should return:
+
+```
+    Hello, evaluating: (58.5+2.2)*(3.8-1) = 169.96
+```
+
+#### Note: There are bugs in the calculation, like "failure on unary operators", but it's just a demo, so...
