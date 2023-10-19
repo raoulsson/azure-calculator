@@ -167,8 +167,7 @@ def calc(req: func.HttpRequest) -> func.HttpResponse:
         try:
             calculator = Calculator()
             result = calculator.eval(calculation)
-            print("Result: " + str(result))
-            logging.info("Result: " + str(result))
+            __print_log("Result: " + str(result))
             return func.HttpResponse(f"Hello, evaluating: {calculation} = " + str(result))
         except Exception as e:
             return func.HttpResponse(
@@ -182,20 +181,20 @@ def calc(req: func.HttpRequest) -> func.HttpResponse:
         )
 
 
+def __print_log(message: str) -> None:
+    print(message)
+    logging.info(message)
+
+
 if __name__ == '__main__':
     calculator = Calculator()
     result = calculator.eval("58+2*3")
-    print("Result: " + str(result))
-    logging.info("Result: " + str(result))
+    __print_log("Result: " + str(result))
     result = calculator.eval("(58+2)*3")
-    print("Result: " + str(result))
-    logging.info("Result: " + str(result))
+    __print_log("Result: " + str(result))
     result = calculator.eval("58+(2*3)")
-    print("Result: " + str(result))
-    logging.info("Result: " + str(result))
+    __print_log("Result: " + str(result))
     result = calculator.eval("(58+2)*(3-1)")
-    print("Result: " + str(result))
-    logging.info("Result: " + str(result))
+    __print_log("Result: " + str(result))
     result = calculator.eval("(58.5+2.2)*(3.8-1)")
-    print("Result: " + str(result))
-    logging.info("Result: " + str(result))
+    __print_log("Result: " + str(result))
