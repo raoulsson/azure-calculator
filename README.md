@@ -1,7 +1,7 @@
 # azure-calculator
 
 Short Demo for Azure Functions - the app part, not the azure part...
-Deployed is only "function_app.py"
+Deployed to "Azure Functions" is only "function_app.py"
 
 To run locally: 
 
