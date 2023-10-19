@@ -17,7 +17,8 @@ or
     pip install azure.functions
 ```
 
-Example calc: (58.5+2.2)*(3.8-1)
+
+### Example calc: (58.5+2.2)*(3.8-1) = 169.96
 
 Once it's in Azure, call it like so via URL params, after URL encoding the calculation, over at e.g. https://www.urlencoder.org/:
 

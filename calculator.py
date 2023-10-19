@@ -156,5 +156,5 @@ if __name__ == '__main__':
     print("Result: " + str(result))
     result = calculator.eval("(58+2)*(3-1)")
     print("Result: " + str(result))
-    result = calculator.eval("(58.5+2.2)*(3.8-1.5)")
+    result = calculator.eval("(58.5+2.2)*(3.8-1)")
     print("Result: " + str(result))
