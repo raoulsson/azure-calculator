@@ -35,7 +35,7 @@ https://azure-calculator.azurewebsites.net/api/calc?calculation=%2858.5%2B2.2%29
 ```
 
 
-Or via Curl & POST:
+or via Curl & POST:
 
 ```
     curl -X POST -H "Content-Type: application/json" -d '{"calculation":"(58.5+2.2)*(3.8-1)"}' https://azure-calculator.azurewebsites.net/api/calc; echo
