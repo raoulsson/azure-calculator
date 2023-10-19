@@ -78,7 +78,7 @@ class StringCharTokenizer:
 
 class ArithmeticStringParser:
     """
-    Cannot handle unary plus and minus.
+    Cannot handle unary plus and minus. Plus other bugs...
     """
 
     def __init__(self) -> None:
