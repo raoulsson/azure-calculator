@@ -7,7 +7,14 @@ Run:
 
 ``` 
     source venv/bin/activate
-    pip install -r requirements.txt (or pip install azure.functions)
+    pip install -r requirements.txt 
+```
+
+or 
+
+``` 
+    source venv/bin/activate
+    pip install azure.functions
 ```
 
 Example calc: (58.5+2.2)*(3.8-1)
