@@ -114,7 +114,7 @@ class ArithmeticStringParser:
         if reader.peek() == "(":
             reader.read()
             expression = self.__parse_expression(reader, 0)
-            reader.read() 
+            reader.read()
             return expression
         else:
             num = self.__parse_number(reader)
