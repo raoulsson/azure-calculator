@@ -3,7 +3,7 @@
 Short Demo for Azure Functions - the app part, not the azure part...
 Deployed is only "function_app.py"
 
-Run: 
+To run locally: 
 
 ``` 
     source venv/bin/activate
