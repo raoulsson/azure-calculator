@@ -172,7 +172,7 @@ def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
         except Exception as e:
             return func.HttpResponse(
                 f"Exception: {e}",
-                status_code=400
+                status_code=500
             )
     else:
         return func.HttpResponse(
